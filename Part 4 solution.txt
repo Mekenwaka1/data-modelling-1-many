@@ -1,0 +1,26 @@
+
+SQL queries to the answers.
+
+1. Select * from articles where author_id=(select id from authors where name='Kara Melton');
+
+ 2. Select * from cities where province_id=(select id from provinces where name='Ontario');
+
+3. select name from authors where id=(select author_id from articles where title='Coding Bootcamps and Emotional Labor');
+
+4. select count(*) from provinces where country_id=(select id from countries where name='Canada');
+
+5. select count(*) from persons where residence_id=(select id from residences where address='4740 McDermott Street');
+
+6. select name from cities where id=(select city_id from residences where address='4740 McDermott Street');
+
+7. select name from provinces where id=(select province_id from cities where id=(select city_id from residences where address='4740 McDermott Street'));
+
+8. select name from countries where id=(select country_id from provinces where id=(select province_id from cities where id=(select city_id from residences where address='4740 McDermott Street')));
+
+
+9. select name from countries where id=(select country_id from provinces where id=(select province_id from cities where id=(select city_id from residences where id=(select residence_id from persons where name='Destini Davis'))));
+
+
+10. select count(*) from articles where author_id=(select id from authors where name='Aditya Mukerjee');
+
+
